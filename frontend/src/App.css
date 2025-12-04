@@ -1,34 +1,290 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Landing Page Styles - Old School New Body inspired */
+
+/* Reset and Base */
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #333;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Container */
+.landing-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fff;
 }
 
-.App-link {
-    color: #61dafb;
+/* Content Area */
+.content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #333;
+  line-height: 1.3;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 25px 0;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 40px 0 20px 0;
+  color: #333;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 35px 0 15px 0;
+  color: #333;
+}
+
+p {
+  margin: 0 0 20px 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Bold and Emphasis */
+strong {
+  font-weight: bold;
+  color: #000;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #004499;
+}
+
+.telegram-link {
+  color: #0088cc;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+/* Images */
+.image-container {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.content-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+
+/* Dialog/Quote styles */
+.dialog {
+  font-style: italic;
+  color: #444;
+  padding-left: 20px;
+  border-left: 3px solid #ccc;
+  margin: 25px 0;
+}
+
+.quote-block {
+  background-color: #f9f9f9;
+  border-left: 4px solid #666;
+  padding: 15px 20px;
+  margin: 25px 0;
+  font-style: italic;
+}
+
+.quote-block p {
+  margin: 0;
+  color: #444;
+}
+
+/* Highlight Text */
+.highlight-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #c00;
+  text-align: center;
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+
+/* CTA Elements */
+.cta-text {
+  background-color: #fffde7;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin: 30px 0;
+}
+
+.cta-button-container {
+  text-align: center;
+  margin: 35px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #c00;
+  color: #fff !important;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #a00;
+  color: #fff !important;
+}
+
+/* PS Section */
+.ps-section {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
+}
+
+.ps-section h3 {
+  font-size: 20px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 25px 15px 50px;
+  }
+
+  .main-title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 19px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .highlight-text {
+    font-size: 20px;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+
+  .content-image {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    padding: 20px 12px 40px;
+  }
+
+  .main-title {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .dialog {
+    padding-left: 15px;
+  }
+
+  .quote-block {
+    padding: 12px 15px;
+  }
+
+  .cta-text {
+    padding: 15px;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Telegram In-App Browser specific fixes */
+@supports (-webkit-touch-callout: none) {
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+/* Dark mode support for Telegram */
+@media (prefers-color-scheme: dark) {
+  /* Keep light theme even in dark mode for landing page readability */
+  .landing-container {
+    background-color: #fff;
+  }
+  
+  body {
+    background-color: #fff;
+  }
 }
