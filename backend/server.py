@@ -68,6 +68,25 @@ async def get_status_checks():
     
     return status_checks
 
+# Download endpoints for landing files
+@api_router.get("/download/php")
+async def download_php():
+    file_path = ROOT_DIR / "static" / "bitnest-php.tar.gz"
+    return FileResponse(
+        path=file_path,
+        filename="bitnest-php.tar.gz",
+        media_type="application/gzip"
+    )
+
+@api_router.get("/download/react")
+async def download_react():
+    file_path = ROOT_DIR / "static" / "bitnest-landing.tar.gz"
+    return FileResponse(
+        path=file_path,
+        filename="bitnest-landing.tar.gz",
+        media_type="application/gzip"
+    )
+
 # Include the router in the main app
 app.include_router(api_router)
 
